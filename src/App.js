@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ParticleBackground from "./components/ParticleBackground";
+import Navbar from "./components/Navbar";
+import Visualizer from "./components/Visualizer";
+import CallToAction from "./components/CallToAction";
+import ReadMe from "./components/ReadMe";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<ParticleBackground />
+			<Navbar />
+			<div className="container-sm d-flex flex-column mt-5 mb-4">
+				<Visualizer />
+				<CallToAction />
+				<ReadMe />
+			</div>
+		</>
+	);
 }
 
 export default App;
